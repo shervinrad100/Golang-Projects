@@ -3,9 +3,13 @@ You are given two non-empty linked lists representing two non-negative integers.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
 ### Example 1:
+
 2 --> 4 --> 3
-5 --> 6 --> 4
--------------
+
+5 --> 6 --> 4 
+
+xxxxxxxxxxxx
+
 7 --> 0 --> 8
 
 ```
