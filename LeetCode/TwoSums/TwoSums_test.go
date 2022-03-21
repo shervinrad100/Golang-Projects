@@ -48,4 +48,4 @@ func TestTwoSums(t *testing.T) { // test func must start with "Test" followed by
 
 }
 
-// go test [--verbose|-v] <path_to_package>
+// go test [--verbose|-v] <path_to_PACKAGE>
