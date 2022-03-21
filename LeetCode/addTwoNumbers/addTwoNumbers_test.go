@@ -5,28 +5,15 @@ import (
 	"testing"
 )
 
-func listNodeFromSlice(slice *[]int) *ListNode {
+func ListNodeFromSlice(slice *[]int) *ListNode {
 	ans := ListNode{}
 	ans.Val = (*slice)[0]
 	NextItems := len(*slice)
 	if NextItems != 1 {
 		sliceOf := (*slice)[1:]
-		ans.Next = listNodeFromSlice(&sliceOf)
+		ans.Next = ListNodeFromSlice(&sliceOf)
 	}
 	return &ans
-}
-
-func sliceFromListNode(L *ListNode) []int {
-	ans := []int{}
-	for {
-		ans = append(ans, L.Val)
-		if L.Next != nil {
-			L = L.Next
-		} else {
-			break
-		}
-	}
-	return ans
 }
 
 func TestAddTwoNumbers(t *testing.T) {
@@ -59,9 +46,9 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 
 	for testIndex, test := range testQuestions {
-		l1 := listNodeFromSlice(&(test[0]))
-		l2 := listNodeFromSlice(&(test[1]))
-		output := sliceFromListNode(AddTwoNumbers(l1, l2))
+		l1 := ListNodeFromSlice(&(test[0]))
+		l2 := ListNodeFromSlice(&(test[1]))
+		output := SliceFromListNode(AddTwoNumbers(l1, l2))
 
 		var correct bool = true
 
@@ -74,10 +61,10 @@ func TestAddTwoNumbers(t *testing.T) {
 
 		if !correct {
 			t.Errorf("Test %d failed!\nExpected output: %d\nYour output: %d",
-				testIndex, testAnswers[testIndex], output,
+				testIndex+1, testAnswers[testIndex], output,
 			)
 		} else {
-			fmt.Printf("Testcase %v passed!\n", testIndex)
+			fmt.Printf("Testcase %v passed!\n", testIndex+1)
 		}
 
 	}
