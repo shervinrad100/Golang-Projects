@@ -9,28 +9,28 @@ var (
 )
 
 func main() {
-	// array of size 3 holding ints and you fill it with values 1 to 3
-	// grades = [3]int
-	// grades[0] = 1
-	// grades[1] = 2
-	// grades[2] = 3
-	grades := [...]int{1, 2, 3}
-	fmt.Println("Grades:", grades)
-	fmt.Printf("first grade: %v (type %T)\n", grades[0], grades[0])
+	// // array of size 3 holding ints and you fill it with values 1 to 3
+	// // grades = [3]int
+	// // grades[0] = 1
+	// // grades[1] = 2
+	// // grades[2] = 3
+	// grades := [...]int{1, 2, 3}
+	// fmt.Println("Grades:", grades)
+	// fmt.Printf("first grade: %v (type %T)\n", grades[0], grades[0])
 
-	fmt.Println(identityMatrix)
+	// fmt.Println(identityMatrix)
 
-	// arrays in Go are not referencing where the internal values are
-	// its actually stored as a value
-	// so if you have an array with len(array) << 10 then it copies the whole thing across and is v inefficient
-	// you can create a reference by having b:= &a which makes b point to a
+	// // arrays in Go are not referencing where the internal values are
+	// // its actually stored as a value
+	// // so if you have an array with len(array) << 10 then it copies the whole thing across and is v inefficient
+	// // you can create a reference by having b:= &a which makes b point to a
 
-	// slices dont have the fixed length that arrays do
-	mySlice := []int{1, 2, 3}
-	fmt.Println(mySlice)
-	// slice is the projection of an array, capacity shows the len of the underlying array cap(a)
-	// slices are reference types unlike arrays
-	// you can use the make function to create a slice with larger capacity
+	// // slices dont have the fixed length that arrays do
+	// mySlice := []int{1, 2, 3}
+	// fmt.Println(mySlice)
+	// // slice is the projection of an array, capacity shows the len of the underlying array cap(a)
+	// // slices are reference types unlike arrays
+	// // you can use the make function to create a slice with larger capacity
 
 	a := make([]int, 3, 100) // len 3 cap 100
 	fmt.Println(a)

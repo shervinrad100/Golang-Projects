@@ -29,6 +29,12 @@ import (
 // use uppercase for all acronyms
 
 func main() {
+	myString := "Hello World!"
+	fmt.Println("myString: ", myString)
+	fmt.Println(myString[0])
+	myRune := []rune(myString)
+	fmt.Println("myRune: ", myRune)
+
 	fmt.Println("Hello World!")
 	var i int // you can declare the type of the var without assignment
 	i = 42
