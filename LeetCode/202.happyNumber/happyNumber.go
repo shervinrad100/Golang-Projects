@@ -1,3 +1,7 @@
+// stats
+// Runtime: 0ms - Beats 100.00%
+// Memory: 5.76MB - Beats 3.67%
+
 package main
 
 import (
