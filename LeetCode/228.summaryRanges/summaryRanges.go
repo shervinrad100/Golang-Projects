@@ -1,6 +1,6 @@
 // stats:
 // Runtime: 0ms - Beats 100.00%
-// Memory: 4.00MB - Beats 1.66%
+// Memory: 3.80MB - Beats 99.63%
 
 package main
 
@@ -13,6 +13,10 @@ func main() {
 }
 
 func summaryRanges(nums []int) []string {
+	if len(nums) == 0 {
+		// this if loop saves us 0.3MB
+		return []string{}
+	}
 	output := []string{}
 	p1, p2 := 0, 0
 
